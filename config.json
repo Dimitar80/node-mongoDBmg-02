@@ -1,0 +1,12 @@
+{
+    "db": {
+        "host": "cluster0-3tbei.mongodb.net",
+        "dbname": "school",
+        "username": "dev",
+        "password": "DEV123!"
+    },
+    "mailer": {
+        "server": "",
+        "api_key": ""
+    }
+}
