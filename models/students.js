@@ -8,6 +8,7 @@ const Student = mongoose.model(
         email: String,
         birthday: Date,
         city: String,
+        state: String,
         average_grade: Number,
         courses: [String]
         
@@ -46,6 +47,7 @@ const getOne = (id) => {
 const save = (data) => {
     return new Promise((success, fail) => {
         var s = new Student(data);
+        console.log(s)
         s.save(data, err => {
             if(err){
                 return fail(err);

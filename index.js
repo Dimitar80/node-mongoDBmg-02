@@ -6,7 +6,7 @@ const DBConn = require('./db/connection');
 const students = require('./handlers/students');
 
 var c = config.getConfig('db');
-console.log(c)
+// console.log(c)
 
 DBConn.init(c);
 const api = express();

@@ -14,6 +14,7 @@ const getOne = (req, res) => {
     mStudenti.getOne(req.params.id)
     .then(data => {
         res.status(200).send(data);
+        console.log(data)
     })
     .catch(err => {
         res.status(500).send(err);
@@ -60,6 +61,7 @@ const replace = (req, res) => {
         mStudenti.replace(req.params.id, data)
         .then(() => {
             res.status(204).send();
+            console.log(data)
         })
         .catch(err => {
             res.status(500).send(err);
