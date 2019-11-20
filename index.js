@@ -14,6 +14,7 @@ const api = express();
 
 api.use(bodyParser.json());
 
+
 // Routes //
 api.get('/api/v1/students', students.getAll);
 api.get('/api/v1/students/:id', students.getOne);

@@ -11,6 +11,7 @@ const getAll = (req, res) => {
 }
 
 const getOne = (req, res) => {
+    // console.log(req)
     mStudenti.getOne(req.params.id)
     .then(data => {
         res.status(200).send(data);
@@ -62,7 +63,7 @@ const replace = (req, res) => {
         mStudenti.replace(req.params.id, data)
         .then(() => {
             res.status(204).send();
-            console.log(data)
+            // console.log(data)
         })
         .catch(err => {
             res.status(500).send(err);
@@ -76,7 +77,7 @@ const update = (req, res) => {
     mStudenti.replace(req.params.id, req.body)
     .then(() => {
         res.status(204).send();
-        console.log(req.body)
+        // console.log(req.body)
     })
     .catch(err => {
         res.status(500).send(err);
