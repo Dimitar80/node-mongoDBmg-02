@@ -47,6 +47,7 @@ const save = (req, res) => {
 
 const replace = (req, res) => {
     var data = req.body;
+    // console.log(data)
     // Validacija //
     let er = 0;
     if(data.first_name == undefined || data.first_name.length == 0){er++;}
@@ -75,6 +76,7 @@ const update = (req, res) => {
     mStudenti.replace(req.params.id, req.body)
     .then(() => {
         res.status(204).send();
+        console.log(req.body)
     })
     .catch(err => {
         res.status(500).send(err);

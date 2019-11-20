@@ -1,4 +1,5 @@
 const express = require('express');
+const port =  8000;
 const bodyParser = require('body-parser');
 
 const config = require('./config/index.js');
@@ -21,12 +22,12 @@ api.put('/api/v1/students/:id', students.replace);
 api.patch('/api/v1/students/:id', students.update);
 api.delete('/api/v1/students/:id', students.remove);
 
-api.listen(8000, err => {
+api.listen(port, err => {
     // console.log(api)
     if(err){
         console.log('could not start server');
         console.log(err);
         return;
     }
-    console.log('server started successfully on port 8000');
+    console.log(`server started successfully on port ${port}`);
 });
