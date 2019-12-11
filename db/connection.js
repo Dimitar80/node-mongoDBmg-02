@@ -16,7 +16,7 @@ const init = (config) => {
 }
 
 const parseCString = (config) => {
-    var cs = uri.replace('{username}', config.username);
+var cs = uri.replace('{username}', config.username);
     cs = cs.replace('{password}', config.password);
     cs = cs.replace('{host}', config.host);
     cs = cs.replace('{dbname}', config.dbname);
